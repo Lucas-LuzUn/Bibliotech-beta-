@@ -1,0 +1,108 @@
+/*
+PALETAS DE CORES:
+AZUL: #153448
+VERMELHO: #c81634
+DOURADO: #dac0a3
+*/
+
+/* Define a altura total do corpo da página */
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.content
+{
+    margin: 10px 10px 10px 50px;
+    padding: 15px 60px;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+   
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+#msg_erro{
+    font-size: smaller;
+    font-weight: bold;
+    font-style: italic;
+    color: #c81634;
+    margin: 0;
+}
+
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    color: #153448;
+    width: 100%;
+}
+
+.formulario label {
+    margin-top: 5px;
+    font-weight: bolder;
+}
+
+#input_usuario {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 2px solid #153448;
+    width: 100%;
+    height: 20px; 
+}
+
+#input_senha {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    border: 2px solid #153448;
+    width: 100%;
+    height: 20px; 
+}
+
+#button_login {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #c81634;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: medium;
+    width: 102%;
+    font-weight: bolder;
+}
+
+#button_login:hover {
+    background-color: #ac142e;
+}
+
+#link_cadastro {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+#link_cadastro a {
+    color: #3e4a65;
+    text-decoration: none;
+}
+
+#link_cadastro a:hover {
+    text-decoration: underline;
+}
+
+#ilustracao {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}

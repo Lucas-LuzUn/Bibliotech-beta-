@@ -1,0 +1,172 @@
+/*
+PALETAS DE CORES:
+AZUL: #153448
+VERMELHO: #c81634
+DOURADO: #dac0a3
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+    color: #153448;
+}
+
+#header_home{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px; /* Espaçamento interno opcional */
+    margin: auto;
+    border-top: 10px solid #153448de;
+}
+
+#itens_home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border: 2px solid #153448de;
+    border-radius: 8px;
+}
+
+#barra_pesquisa{
+    width: 350px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+#button_pesquisa{
+    height: 28px;
+    border-radius: 5px;
+    padding: 8px;
+    margin-left: 2px;
+    background-color: #fff;
+    color: aliceblue;
+    font-size: smaller;
+    font-weight: bold;
+    transition: 0.7ms;
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#button_pesquisa:active{
+    transform: scale(0.95);
+}
+
+
+#nav_home{
+    color: #fff;
+    background-color: #153448de;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+    height: 25px;
+}
+
+.button_menu{
+    text-decoration: none;
+    transition: 0.5ms;
+    margin: 5px;
+    padding: 1px 10px;
+    border-radius: 5px;
+}
+
+.button_menu:hover{
+    color: #153448;
+    transition: 0.5ms;
+    background-color: #fff;
+}
+
+#titulo_busca{
+    color: #153448de;
+    margin: 0 40px;
+}
+
+#list_livros{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 90vw;
+    gap: 64px;
+    margin: 32px auto;
+    /* display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly; */
+}
+
+.livros-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: smaller;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: rgba(237, 237, 237, 0.512);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 0.3s;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+
+}
+.livros-info:hover{
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
+.titulo-livro{
+    font-size: 1rem;
+
+}
+
+.info_livros{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 8px;
+    padding: 0 8px;
+   
+}
+
+.capa-livro{
+    width: 75%;
+}
+
+#footer_home{
+	background-color: #9d132ad1;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
