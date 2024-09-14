@@ -106,3 +106,77 @@ header {
     justify-content: center;
     align-items: center;    
 }
+
+@media (max-width: 768px) {
+    /* Ajustes no corpo da página */
+    body {
+        padding: 0; /* Remove o padding para centralizar o conteúdo */
+        height: 100vh; /* Garante que a altura da tela seja usada */
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+        margin: 0;
+        flex-direction: column; /* Alinha itens em coluna */
+    }
+
+    /* Ajustes no contêiner de conteúdo */
+    .content {
+        margin: 0; /* Remove a margem para centralizar o contêiner */
+        padding: 20px; /* Adiciona padding para o contêiner */
+        width: 85%; /* Garante que o contêiner ocupe a largura total disponível */
+        max-width: 400px; /* Define uma largura máxima para o contêiner */
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    /* Remove a sombra */
+        text-align: center; /* Centraliza o texto dentro do contêiner */
+    }
+
+    /* Ajustes no cabeçalho */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Ajustes na mensagem de erro */
+    #msg_erro {
+        font-size: 14px;
+    }
+
+    /* Ajustes no formulário */
+    .formulario {
+        width: 100%;
+        padding: 0;
+        box-sizing: border-box; /* Inclui o padding e a borda no cálculo da largura */
+    }
+
+    .formulario label {
+        display: block; /* Faz com que o label ocupe a largura total */
+        margin-top: 10px; /* Adiciona margem superior */
+        text-align: left; /* Alinha o texto do label à esquerda */
+    }
+
+    /* Ajustes nos campos de entrada */
+    #input_usuario, #input_senha {
+        width: calc(100% - 20px); /* Ajusta a largura para que os inputs não ocupem toda a largura disponível */
+        height: 30px; /* Ajusta a altura dos campos de entrada */
+        margin-top: 5px; /* Adiciona margem superior */
+        margin-bottom: 10px; /* Adiciona margem inferior */
+    }
+
+    /* Ajustes no botão de login */
+    #button_login {
+        margin-top: 20px;
+        padding: 15px;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    /* Ajustes no link de cadastro */
+    #link_cadastro {
+        font-size: 16px;
+    }
+
+    /* Ocultar a imagem com ID "ilustracao" em dispositivos móveis */
+    #ilustracao {
+        display: none;
+    }
+}
