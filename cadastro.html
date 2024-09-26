@@ -19,7 +19,7 @@
             <div id="container-form">
                 <div id="container-header">
                 <h1 class="cadastro-title">Cadastre-se</h1>
-                <img src="imagens/logo.png" alt="Logo" width="150px">
+                <img src="imagens/logo.png" alt="Logo" id="logo">
                 </div>
 
                 <form action="http://localhost:8080/alunos/login" method="post" id="form">
@@ -31,12 +31,14 @@
                     <input id="nome" type="text" placeholder="Digite seu nome:">
 
                     <label for="senha">Senha:</label>
-                    <input id="senha" type="text" placeholder="Digite seu senha:">
+                    <input id="senha" type="password" placeholder="Digite seu senha:">
 
                     <button id="button-send" type="submit">Enviar</button>
                 </form>
             </div>
 
         </div>
+
+    <script src="cadastro.js"></script>
 </body>
 </html>

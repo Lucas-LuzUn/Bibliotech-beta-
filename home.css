@@ -5,27 +5,28 @@ VERMELHO: #c81634
 DOURADO: #dac0a3
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-body{
+body {
     font-family: 'Poppins', sans-serif;
     font-size: smaller;
     color: #153448;
 }
 
-#header_home{
+#header_home {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    padding: 8px; /* Espaçamento interno opcional */
+    padding: 8px;
+    /* Espaçamento interno opcional */
     margin: auto;
     border-top: 10px solid #153448de;
 }
 
-#itens_home{
+#itens_home {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,7 +35,7 @@ body{
     border-radius: 8px;
 }
 
-#barra_pesquisa{
+#barra_pesquisa {
     width: 350px;
     height: 20px;
     border: none;
@@ -42,7 +43,7 @@ body{
     padding: 2px 10px;
 }
 
-#button_pesquisa{
+#button_pesquisa {
     height: 28px;
     border-radius: 5px;
     padding: 8px;
@@ -60,22 +61,22 @@ body{
     justify-content: center;
 }
 
-#button_pesquisa:active{
+#button_pesquisa:active {
     transform: scale(0.95);
 }
 
 
-#nav_home{
+#nav_home {
     color: #fff;
     background-color: #153448de;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
     height: 25px;
 }
 
-.button_menu{
+.button_menu {
     text-decoration: none;
     transition: 0.5ms;
     margin: 5px;
@@ -83,18 +84,18 @@ body{
     border-radius: 5px;
 }
 
-.button_menu:hover{
+.button_menu:hover {
     color: #153448;
     transition: 0.5ms;
     background-color: #fff;
 }
 
-#titulo_busca{
+#titulo_busca {
     color: #153448de;
     margin: 0 40px;
 }
 
-#list_livros{
+#list_livros {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     max-width: 90vw;
@@ -106,7 +107,7 @@ body{
     justify-content: space-evenly; */
 }
 
-.livros-info{
+.livros-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -124,128 +125,157 @@ body{
     cursor: pointer;
 
 }
-.livros-info:hover{
+
+.livros-info:hover {
     transition: 0.3s;
     transform: scale(1.1);
 }
 
-.titulo-livro{
+.titulo-livro {
     font-size: 1rem;
 
 }
 
-.info_livros{
+.info_livros {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     gap: 8px;
     padding: 0 8px;
-   
+
 }
 
-.capa-livro{
+.capa-livro {
     width: 75%;
 }
 
-#footer_home{
-	background-color: #9d132ad1;
-	color: #fff;
-	padding: 20px;
-	text-align: center;
-	margin-top: 50px;
+#footer_home {
+    background-color: #9d132ad1;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
 }
 
 ul {
-	list-style: none;
-	padding: 0;
-	margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 li {
-	display: inline-block;
-	margin: 0 10px;
+    display: inline-block;
+    margin: 0 10px;
 }
 
 a {
-	color: #fff;
-	text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
-    @media (max-width: 768px) {
 
-        #header_home {
-            flex-direction: row; /* Ajusta a direção dos itens no cabeçalho */
-            align-items: center;
-            justify-content: space-between; /* Centraliza itens no cabeçalho */
-        }
-
-    
-        #itens_home {
-            flex-direction: row; /* Ajusta a direção dos itens na seção de itens */
-            width: 40%; /* Garante que os itens ocupem toda a largura disponível */
-            padding: 2px; /* Ajusta o padding para telas menores */
-        }
-    
-        #barra_pesquisa {
-            width: 90%; /* Ajusta a largura para ser mais responsiva */
-            max-width: 100%; /* Garante que não ultrapasse a largura do contêiner */
-            height: 30px; /* Ajusta a altura para melhor usabilidade em dispositivos móveis */
-            padding: 5px 10px; /* Aumenta o padding para melhor interação em telas menores */
-        }
-    
-        #button_pesquisa {
-            width: 40%; /* Ajusta o botão para ocupar toda a largura disponível */
-            height: 40px; /* Ajusta a altura do botão */
-            margin-left: 0; /* Remove a margem esquerda para botões empilhados */
-            padding: 5px; /* Ajusta o padding para maior área clicável */
-            font-size: medium; /* Aumenta a legibilidade em dispositivos móveis */
-        }
-    
-        #nav_home {
-            flex-direction: column; /* Alinha os itens de navegação em coluna para dispositivos menores */
-            height: auto; /* Ajusta a altura para se adaptar ao conteúdo */
-            padding: 10px; /* Adiciona padding para melhor espaçamento em dispositivos móveis */
-        }
-    
-        .button_menu {
-            margin: 10px 0; /* Ajusta a margem para espaçamento vertical */
-            padding: 5px 15px; /* Ajusta o padding para botões de menu em dispositivos móveis */
-        }
-    
-        #titulo_busca {
-            margin: 10px 10px; /* Ajusta a margem para centralizar o título de busca */
-        }
-    
-        #list_livros {
-            grid-template-columns: 1fr 1fr; /* Exibe os itens em uma única coluna para telas menores */
-            gap: 35px; /* Ajusta o espaçamento entre os itens */
-            margin: 20px 5px; /* Ajusta a margem para centralizar o grid */
-        }
-    
-        .livros-info {
-            font-size: smaller; /* Ajusta o tamanho da fonte para telas menores */
-            padding: 10px; /* Aumenta o padding para melhor usabilidade */
-            width: 100%; /* Garante que as caixas de informações ocupem toda a largura disponível */
-        }
-    
-        .capa-livro {
-            width: 100%; /* Ajusta a largura da imagem da capa para se adaptar ao contêiner */
-        }
-    
-        #footer_home {
-            padding: 10px; /* Ajusta o padding para o rodapé */
-            font-size: smaller; /* Ajusta o tamanho da fonte para melhor legibilidade em dispositivos móveis */
-        }
-    
-        ul {
-            padding: 0;
-        }
-    
-        li {
-            display: block; /* Exibe os itens da lista em blocos para melhor visualização */
-            margin: 5px 0; /* Ajusta a margem para espaçamento vertical */
-        }
+    #header_home {
+        flex-direction: row;
+        /* Ajusta a direção dos itens no cabeçalho */
+        align-items: center;
+        justify-content: space-between;
+        /* Centraliza itens no cabeçalho */
     }
-    
+
+
+    #itens_home {
+        flex-direction: row;
+        /* Ajusta a direção dos itens na seção de itens */
+        width: 40%;
+        /* Garante que os itens ocupem toda a largura disponível */
+        padding: 2px;
+        /* Ajusta o padding para telas menores */
+    }
+
+    #barra_pesquisa {
+        width: 90%;
+        /* Ajusta a largura para ser mais responsiva */
+        max-width: 100%;
+        /* Garante que não ultrapasse a largura do contêiner */
+        height: 30px;
+        /* Ajusta a altura para melhor usabilidade em dispositivos móveis */
+        padding: 5px 10px;
+        /* Aumenta o padding para melhor interação em telas menores */
+    }
+
+    #button_pesquisa {
+        width: 40%;
+        /* Ajusta o botão para ocupar toda a largura disponível */
+        height: 40px;
+        /* Ajusta a altura do botão */
+        margin-left: 0;
+        /* Remove a margem esquerda para botões empilhados */
+        padding: 5px;
+        /* Ajusta o padding para maior área clicável */
+        font-size: medium;
+        /* Aumenta a legibilidade em dispositivos móveis */
+    }
+
+    #nav_home {
+        flex-direction: column;
+        /* Alinha os itens de navegação em coluna para dispositivos menores */
+        height: auto;
+        /* Ajusta a altura para se adaptar ao conteúdo */
+        padding: 10px;
+        /* Adiciona padding para melhor espaçamento em dispositivos móveis */
+    }
+
+    .button_menu {
+        margin: 10px 0;
+        /* Ajusta a margem para espaçamento vertical */
+        padding: 5px 8px;
+        /* Ajusta o padding para botões de menu em dispositivos móveis */
+    }
+
+    #titulo_busca {
+        margin: 10px 10px;
+        /* Ajusta a margem para centralizar o título de busca */
+    }
+
+    #list_livros {
+        grid-template-columns: 1fr 1fr;
+        /* Exibe os itens em uma única coluna para telas menores */
+        gap: 35px;
+        /* Ajusta o espaçamento entre os itens */
+        margin: 20px 5px;
+        /* Ajusta a margem para centralizar o grid */
+    }
+
+    .livros-info {
+        font-size: smaller;
+        /* Ajusta o tamanho da fonte para telas menores */
+        padding: 10px;
+        /* Aumenta o padding para melhor usabilidade */
+        width: 100%;
+        /* Garante que as caixas de informações ocupem toda a largura disponível */
+    }
+
+    .capa-livro {
+        width: 100%;
+        /* Ajusta a largura da imagem da capa para se adaptar ao contêiner */
+    }
+
+    #footer_home {
+        padding: 10px;
+        /* Ajusta o padding para o rodapé */
+        font-size: smaller;
+        /* Ajusta o tamanho da fonte para melhor legibilidade em dispositivos móveis */
+    }
+
+    ul {
+        padding: 0;
+    }
+
+    li {
+        display: block;
+        /* Exibe os itens da lista em blocos para melhor visualização */
+        margin: 5px 0;
+        /* Ajusta a margem para espaçamento vertical */
+    }
 }
