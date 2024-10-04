@@ -1,0 +1,172 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    font-size: smaller;
+    color: #153448;
+}
+
+#header_aluguel{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 8px; /* Espaçamento interno opcional */
+    margin: auto;
+    border-top: 10px solid #153448de;
+}
+
+#itens_aluguel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border: 2px solid #153448de;
+    border-radius: 8px;
+}
+
+#barra_pesquisa{
+    width: 350px;
+    height: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 2px 10px;
+}
+
+#button_pesquisa{
+    height: 28px;
+    padding: 8px;
+    margin-left: 2px;
+    background-color: #fff;
+    color: aliceblue;
+    font-size: smaller;
+    font-weight: bold;
+    transition: 0.7ms;
+    cursor: pointer;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#button_pesquisal:hover{
+    transition: 0.7ms;
+    background-color: #214c6cde;
+}
+
+#button_pesquisa:active{
+    transform: scale(0.95);
+}
+
+
+#nav_aluguel{
+    color: #fff;
+    background-color: #153448de;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;   
+    height: 30px;
+}
+
+.button_menu {
+    text-decoration: none;
+    transition: 0.5ms;
+    margin: 5px;
+    padding: 1px 10px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: medium;
+}
+
+.button_menu:hover {
+    color: #153448;
+    transition: 0.5ms;
+    background-color: #fff;
+}
+
+#footer_aluguel{
+	background-color: #9d132ad1;
+	color: #fff;
+	padding: 20px;
+	text-align: center;
+	margin-top: 50px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+	margin: 0 10px;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+#livro_aluguel{
+    margin: 20px 0;
+    padding: 10px 50px;
+}
+
+.livros-info{
+    display: flex;
+    flex-direction: row;
+    padding: 30px 30px;
+    margin: auto;
+    border: 1px solid gray;
+    border-radius: 5px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+.capa-livro{
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+}
+.info_livro{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 20px;
+}
+
+.div-button{
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+.alugar-livro{
+    background-color: #9d132ad1;
+    border: none;
+    border-radius: 5px;
+    font-size: larger;
+    font-weight: bold;
+    color: #fff;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #9d132ad1;
+
+    transition: 0.5ms;
+}
+
+.alugar-livro:hover{
+    transition: 0.5ms;
+    background-color: #7b1223d1;
+}
+
+.alugar-livro:active{
+    transition: 0.5ms;
+    transform: scale(0.95);
+}
