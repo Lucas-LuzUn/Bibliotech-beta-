@@ -24,7 +24,7 @@ function login(event) {
     .then(response => response.json())
     .then(data => {
         if (data.success) { // Supondo que a API retorne um campo 'success' quando o login é válido
-            window.location.href = "home.html"; // Redireciona para a página home.html
+            window.location.href = "/Bibliotech-beta-/pages/home.html"; // Redireciona para a página home.html
         } else {
             document.getElementById("msg_erro").innerHTML = "Usuário ou senha incorretos!";
         }
