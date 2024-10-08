@@ -12,11 +12,10 @@ function cadastrarPessoa(event) {
         nome: nome,
         senha: senha
     };
-    //Daqui pra cima eu apenas armazenei os dados dos inputs em variaveis e montei como que o arquivo será enviado.  
 
     // Fazendo a requisição POST para o endpoint de cadastro da API
-    fetch('http://localhost:8080/alunos/cadastrar', { // Salve hebão, aqui você pode substuir o endpoint de acordo com a sua API...essa que eu coloquei é generica.
-        method: 'POST', //você estava certo...o método continua sendo post kkkkkkkkkkk
+    fetch('http://localhost:8080/alunos/cadastrar', { // Substitua pelo endpoint correto da sua API
+        method: 'POST', 
         headers: {
             'Content-Type': 'application/json'
         },
@@ -24,10 +23,11 @@ function cadastrarPessoa(event) {
     })
     .then(response => response.json())
     .then(data => {
-        if (data.success) { // Supondo que a API retorne um campo 'success' quando o cadastro é bem-sucedido
-            window.location.href = "/Bibliotech-beta-/index.html"; //Se o cadastro for bem sucedido, então o usuário é redirecionado p/ a pagina de login, para poder acessar utilizando seu novo acesso.
+        console.log(data); // Verifica o que a API está retornando no console
+        if (data.success) { // Supondo que a API retorne 'success' em caso de sucesso
+            window.location.href = "/Bibliotech-beta-/index.html"; // Redireciona após sucesso
         } else {
-            alert("Erro ao cadastrar"); //irei remover isso depois, é apenas para fins de testes.
+            alert("Erro ao cadastrar"); // Teste para verificar se houve falha no cadastro
         }
     })
     .catch(error => {
@@ -35,3 +35,6 @@ function cadastrarPessoa(event) {
         alert("Erro ao cadastrar");
     });
 }
+
+// Chama a função cadastrarPessoa quando o formulário for submetido
+document.getElementById("form").addEventListener("submit", cadastrarPessoa);
