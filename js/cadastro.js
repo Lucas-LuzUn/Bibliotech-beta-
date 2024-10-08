@@ -2,14 +2,16 @@ function cadastrarPessoa(event) {
     event.preventDefault(); // Evita o envio tradicional do formulário
 
     // Obtendo os valores dos campos do formulário
-    var RA = document.getElementById("RA").value;
     var nome = document.getElementById("nome").value;
+    var email= document.getElementById("e-mail").value;
+    var RA = document.getElementById("RA").value;
     var senha = document.getElementById("senha").value;
 
     // Corpo da requisição com os dados da pessoa
     var pessoaData = {
-        RA: RA,
         nome: nome,
+        email: email,
+        RA: RA,
         senha: senha
     };
 
