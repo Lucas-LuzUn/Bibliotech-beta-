@@ -3,7 +3,7 @@ function cadastrarPessoa(event) {
 
     // Obtendo os valores dos campos do formulário
     var nome = document.getElementById("nome").value;
-    var email= document.getElementById("e-mail").value;
+    var email= document.getElementById("email").value;
     var RA = document.getElementById("RA").value;
     var senha = document.getElementById("senha").value;
 
