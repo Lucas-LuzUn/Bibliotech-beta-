@@ -14,7 +14,7 @@ function cadastrarPessoa(event) {
     };
 
     // Fazendo a requisição POST para o endpoint de cadastro da API
-    fetch('http://localhost:8080/pessoas/cadastrar', { // Salve hebão, aqui você pode substuir o endpoint de acordo com a sua API...essa que eu coloquei é generica.
+    fetch('http://localhost:8080/alunos/cadastrar', { // Salve hebão, aqui você pode substuir o endpoint de acordo com a sua API...essa que eu coloquei é generica.
         method: 'POST', //você estava certo...o método continua sendo post kkkkkkkkkkk
         headers: {
             'Content-Type': 'application/json'

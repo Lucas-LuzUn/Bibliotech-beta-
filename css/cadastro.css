@@ -88,6 +88,10 @@ input{
     font-weight: bolder;
 }
 
+#button-send:hover{
+    background-color: #ac142e;
+}
+
 
 @media (max-width: 768px) {
     *{
