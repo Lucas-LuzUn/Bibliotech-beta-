@@ -12,6 +12,7 @@ function cadastrarPessoa(event) {
         nome: nome,
         senha: senha
     };
+    //Daqui pra cima eu apenas armazenei os dados dos inputs em variaveis e montei como que o arquivo será enviado.  
 
     // Fazendo a requisição POST para o endpoint de cadastro da API
     fetch('http://localhost:8080/alunos/cadastrar', { // Salve hebão, aqui você pode substuir o endpoint de acordo com a sua API...essa que eu coloquei é generica.
@@ -24,7 +25,7 @@ function cadastrarPessoa(event) {
     .then(response => response.json())
     .then(data => {
         if (data.success) { // Supondo que a API retorne um campo 'success' quando o cadastro é bem-sucedido
-            window.location.href = "index.html"; //Se o cadastro for bem sucedido, então o usuário é redirecionado p/ a pagina de login, para poder acessar utilizando seu novo acesso.
+            window.location.href = "/Bibliotech-beta-/index.html"; //Se o cadastro for bem sucedido, então o usuário é redirecionado p/ a pagina de login, para poder acessar utilizando seu novo acesso.
         } else {
             alert("Erro ao cadastrar"); //irei remover isso depois, é apenas para fins de testes.
         }
