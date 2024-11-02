@@ -1,4 +1,4 @@
-function cadastrarPessoa(event) {
+function cadastrarPessoa(event){
     event.preventDefault(); // Evita o envio tradicional do formulário
 
     // Obtendo os valores dos campos do formulário

@@ -27,6 +27,8 @@ body {
 header {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
 
 #msg_erro{
@@ -50,36 +52,24 @@ header {
     font-weight: bolder;
 }
 
-#input_usuario {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.input_login {
+    margin: 5px 0px 5px 0px;
     border-radius: 5px;
     border: 2px solid #153448;
-    width: 100%;
-    height: 20px;
-    padding: 0 0 0 10px;
-}
-
-#input_senha {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border-radius: 5px;
-    border: 2px solid #153448;
-    width: 100%;
-    height: 20px; 
-    padding: 0 0 0 10px;
+    padding: 0px 0px 0px 10px;
+    height: 25px;
 }
 
 #button_login {
     margin-top: 10px;
     padding: 10px;
-    background-color: #c81634;
+    background-color: #9d132ad1;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: medium;
-    width: 102%;
+    width: 100%;
     font-weight: bolder;
 }
 

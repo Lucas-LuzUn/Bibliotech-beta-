@@ -26,9 +26,8 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img class="capa-livro" src="${capa}" alt="Capa do livro"/>
                     <div class="info_livros">
                         <h5 class="titulo-livro">${title}</h5>
-                        <p id="id_livro">${identificação}</p>
-                        <button id="button-alugar" onclick="capturar_livro()">Alugar
                     </div>
+                    <button class="button_alugar" onclick="capturar_livro()">Alugar
                 `;
                 card.innerHTML = cardItem;
                 listaLivros.appendChild(card);
@@ -69,9 +68,8 @@ function pesquisar() {
                         <img class="capa-livro" src="${capa}" alt="Capa do livro"/>
                         <div class="info_livros">
                             <h5 class="titulo-livro">${title}</h5>
-                            <p class="id_livro">${identificação}</p>
-                            <button id="button-alugar" onclick="capturar_livro()">Alugar
                         </div>
+                        <button class="button_alugar" onclick="capturar_livro()">Alugar
                     `;
                     card.innerHTML = cardItem;
                     listaLivros.appendChild(card);
@@ -100,3 +98,5 @@ document.getElementById('toggleButton').addEventListener('click', function() {
     sideBar.classList.toggle('visible');
     sideBar.classList.toggle('hidden');
 });
+
+
