@@ -1,6 +1,6 @@
-const apiKey = "AIzaSyDhjlMv4hLPsbO_x1Ge45O_05GLVlfQXh0";
+ const apiKey = "AIzaSyDhjlMv4hLPsbO_x1Ge45O_05GLVlfQXh0";
 
-let id_livro = localStorage.getItem("livro");
+let id_livro = localStorage.getItem("Livro");
 
 document.addEventListener("DOMContentLoaded", function() {
     const url_home = `https://www.googleapis.com/books/v1/volumes?q=${id_livro}&maxResults=1&key=${apiKey}`;
