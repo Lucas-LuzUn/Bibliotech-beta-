@@ -18,17 +18,21 @@ document.addEventListener("DOMContentLoaded", function() {
             const sinopse = item.searchInfo.textSnippet
 
             const card = document.createElement("div")
-            card.classList = 'livros-info'
+            card.classList = 'container_principal'
             const cardItem = `
-                    <img  class="capa-livro" src=${capa}/>
+                    <div class="container_img">
+                        <img  class="capa-livro" src=${capa}/>
+                    </div>
+                    
                     <div class="info_livro">
                         <h1 class="titulo-livro">${title}</h1>
-                        <h2 class="sinopse-livro">${sinopse}</h2>
-                        <p class="descricao-livro"><h4>Descrição:</h4>${descrição}</p>
+                        <h3 class="sinopse-livro">${sinopse}</h3>
                         <h3 class="autor-livro">Autor: ${autor}</h3>
-                        <div class="div-button">
-                        <button class="alugar-livro">Alugar</button>
-                        </div>
+                        <button class="button_alugar">Alugar</button>
+                    </div>
+
+                    <div class="container_descricao">
+                        <p class="descricao-livro"><h3>Descrição:</h3>${descrição}</p>
                     </div>                       
                 `
                 card.innerHTML = cardItem

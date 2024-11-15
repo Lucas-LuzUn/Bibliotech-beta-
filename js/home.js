@@ -51,7 +51,7 @@ function buscarLivros(buscarLivros) {
                             <div class="info_livros">
                                 <h5 class="titulo-livro">${title}</h5>
                             </div>
-                            <button class="button_alugar" onclick="capturar_livro('${title}')">Alugar</button>
+                            <button class="button_alugar" onclick="capturar_livro('${title}')">Ver mais</button>
                         `;
                         // Atribui o HTML do card ao elemento card
                         card.innerHTML = cardItem;
