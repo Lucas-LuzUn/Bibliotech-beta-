@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         <h1 class="titulo-livro">${title}</h1>
                         <h3 class="sinopse-livro">${sinopse}</h3>
                         <h3 class="autor-livro">Autor: ${autor}</h3>
-                        <button class="button_alugar">Alugar</button>
+                        <button class="button_alugar" onclick="Alugar()">Alugar</button>
                     </div>
 
                     <div class="container_descricao">
@@ -42,3 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }) 
 
 });
+
+function Alugar(){
+    window.location.href = "alugue.html";
+}

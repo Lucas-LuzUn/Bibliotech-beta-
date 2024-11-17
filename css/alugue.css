@@ -9,7 +9,7 @@ body{
     color: #153448;
 }
 
-#header_aluguel{
+#header{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -18,7 +18,7 @@ body{
     border-top: 10px solid #153448de;
 }
 
-#itens_aluguel{
+#itens{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,7 +62,7 @@ body{
 }
 
 
-#nav_aluguel{
+#nav{
     color: #fff;
     background-color: #153448de;
     display: flex;
@@ -112,78 +112,56 @@ a {
 	text-decoration: none;
 }
 
-#livro_aluguel{
-    margin: 20px 0;
-    padding: 10px 100px;
-}
 
-/*daqui para baixo são apenas as informações do livro que o usuario deseja ver*/
+/*daqui para baixo é a estilização do formulario.*/
 
-.container_principal{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap:8px;
-    padding: 16px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-
-}
-
-.container_img{
-    display: flex;
-    justify-content: center;
-    padding: 5px;
-}
-
-.capa-livro{
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
-
-}
-.info_livro{
+#container-form{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    padding: 0px 50px;
+    font-weight: bolder;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+#title-form{
+    padding: 0px 20px;
 }
 
-.button_alugar{
+#form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+input{
+    margin: 0 0 10px 0;
+    border-radius: 5px;
+    border: 2px solid #153448;
+    height: 25px;
+    padding: 0 0 0 10px;
+}
+
+#button-send{
+    padding: 10px;
     background-color: #9d132ad1;
+    color: white;
     border: none;
     border-radius: 5px;
-    font-size: larger;
-    font-weight: bold;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid #9d132ad1;
-    height: 10%;
-    transition: 0.5ms;
+    cursor: pointer;
+    font-size: medium;
+    width: 100%;
+    font-weight: bolder;
+    margin-top: 5px;
 }
 
-.button_alugar:hover{
-    transition: 0.5ms;
-    background-color: #7b1223d1;
+#button-send:hover{
+    background-color: #ac142e;
 }
 
-.button_alugar:active{
-    transition: 0.5ms;
-    transform: scale(0.95);
-}
 
-.container_descricao{
-    grid-column: 1 / -1; /* Ocupa todas as colunas */
-    grid-row: 2; /* Segunda linha */
-    width: 100%; /* Garante que ocupe 100% da largura */
-    font-size:medium;
-}
-
-/* Estilo responsivo para telas menores que 768px (smartphones e tablets pequenos) */
 @media (max-width: 768px) {
 
-    #header_home {
+    #header {
         flex-direction: row;
         /* Ajusta a direção dos itens no cabeçalho */
         align-items: center;
@@ -192,7 +170,7 @@ a {
     }
 
 
-    #itens_home {
+    #itens {
         flex-direction: row;
         /* Ajusta a direção dos itens na seção de itens */
         width: 40%;
@@ -225,7 +203,7 @@ a {
         /* Aumenta a legibilidade em dispositivos móveis */
     }
 
-    #nav_home {
+    #nav {
         flex-direction: column;
         /* Alinha os itens de navegação em coluna para dispositivos menores */
         height: auto;
@@ -244,86 +222,5 @@ a {
 
     .button_menu i{
         display: none;
-    }
-
-    #footer_home {
-        padding: 10px;
-        /* Ajusta o padding para o rodapé */
-        font-size: smaller;
-        /* Ajusta o tamanho da fonte para melhor legibilidade em dispositivos móveis */
-    }
-
-    ul {
-        padding: 0;
-    }
-
-    li {
-        display: block;
-        /* Exibe os itens da lista em blocos para melhor visualização */
-        margin: 5px 0;
-        /* Ajusta a margem para espaçamento vertical */
-    }
-
-    /*daqui para baixo vai apenas as inforçãoes dos livros que o usuário deseja visualizar no celular*/
-    #livro_aluguel {
-        display: flex;
-        flex-direction: column;
-        width: auto;
-        height: 100%;
-
-    }
-    
-    /* Layout principal */
-    .container_principal {
-        flex: 1;
-        display:block;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-    
-    /* Imagem do livro */
-    .container_img {
-        justify-content: center;
-        padding: 10px;
-        width: 100%;
-    }
-    
-    .capa-livro {
-        width: 100%;
-        border-radius: 5px;
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px;
-    }
-    
-    /* Informações do livro */
-    .info_livro {
-        display: flex;
-        flex-direction: column;
-        padding:0;
-    }
-    
-    .button_alugar {
-        width: 100%;
-        height: 40px; /* Aumenta para acessibilidade */
-        font-size: medium;
-    }
-    
-    /* Descrição do livro */
-    .container_descricao {
-        width: 100%;
-        padding: 10px;
-        font-size: small;
-        text-align: justify;
-    }
-    
-    .sinopse-livro {
-        display: none; /* Oculta sinopse */
-    }
-    
-    /* Adicionando estilo ao botão */
-    .button_alugar:hover {
-        background-color: #7b1223d1;
-        color: white;
-        transition: 0.3s ease;
     }
 }

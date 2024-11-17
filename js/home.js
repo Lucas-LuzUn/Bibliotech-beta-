@@ -86,7 +86,7 @@ function capturar_livro(title) {
     // Armazena o título do livro selecionado no localStorage (para persistir entre as páginas)
     localStorage.setItem("Livro", title);
     // Redireciona para a página de aluguel (alugar.html)
-    window.location.href = "alugar.html";
+    window.location.href = "livro.html";
 }
 
 // Evento de clique para alternar a visibilidade da barra lateral

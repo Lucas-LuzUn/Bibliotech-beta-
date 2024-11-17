@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Bibliotech-beta-/css/home.css">
+    <link rel="stylesheet" href="/Bibliotech-beta-/css/alugue.css">
     <link rel="stylesheet" href="/Bibliotech-beta-/css/sidebar.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,46 +11,43 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <title>BiblioTech</title>
     <link rel="icon" href="/Bibliotech-beta-/imagens/icon_logo.png" type="image/png">
-
 </head>
-
 <body>
 
-    <header id="header_home">
+    <header id="header">
+
         <button id="toggleButton">
             <i class="fas fa-bars" onclick="open_menu()"></i> 
             <span>Menu</span>
         </button> <!-- Ícone de menu -->
 
-
         <div id="sideBar" class="sidebar hidden">
             <div id="menuContent">
                 <ul>
                     <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
-                    <li><a href="/pages/cadastro.html"><i class="fas fa-user"></i> Meu Perfil</a></li>
-                    <li><a href="emprestimo.html"><i class="fas fa-hand-holding"></i> Meus Empréstimos</a></li>
-                    <li><a href="/Bibliotech-beta-/index.html"><i class="fa-solid fa-door-open"></i> Sair</a></li>
+                    <li><a href="livros.html"><i class="fas fa-book"></i> Livros</a></li>
+                    <li><a href="/pages/cadastro.html"><i class="fas fa-user"></i> Cadastro</a></li>
+                    <li><a href="emprestimo.html"><i class="fas fa-hand-holding"></i> Empréstimo</a></li>
                 </ul>
             </div>
         </div>
 
         <a href="/Bibliotech-beta-/pages/home.html">
-            <img src="/Bibliotech-beta-/imagens/logo.png" width="150px" alt="Logo BiblioTech" id="header_logo">
+            <img src="/Bibliotech-beta-/imagens/logo.png" width="150px" alt="Logo BiblioTech">
         </a>
 
-        <div id="itens_home">
+        <div id="itens">
             <input type="text" placeholder="Procure o livro que deseja:" id="barra_pesquisa">
-            <button id="button_pesquisa" onclick="pesquisar()"><i class="fa-solid fa-magnifying-glass fa-2xl"
-                    style="color: #153448de;"></i></button>
+            <button id="button_pesquisa" onclick="pesquisar()"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #213454;"></i></button>
         </div>
-
+        
         <a href="/Bibliotech-beta-/index.html" id="icon_login">
-            <i class="fa-solid fa-user fa-2xl" style="color: #153448de;"></i>
+            <i class="fa-solid fa-user fa-2xl" style="color: #213454;"></i>
         </a>
     </header>
 
-    <nav id="nav_home">
-        <div id="menu_home">
+    <nav id="nav">
+        <div id="menu_aluguel">
             <a class="button_menu" href="#"><i class="fas fa-heart"></i> Romance</a>
             |
             <a class="button_menu" href="#"><i class="fas fa-khanda"></i> Aventura</a> <!-- Ícone da espada precisa ser adicionado -->
@@ -62,26 +58,37 @@
         </div>
     </nav>
 
-    <main id="main_home">
-        <h1 id="titulo_busca"></h1>
-        <div id="list_livros">
-            <!-- Aqui você pode adicionar o conteúdo dinâmico que será carregado -->
+    <div id="container-form">
+        <h1 id="title-form">Finalize o aluguel!</h1>
+
+            <form id="form">
+                    
+                <label for="RA">Registro do Aluno (RA):</label>
+                <input id="RA" type="text" placeholder="Digite seu RA:">
+
+                <label for="DataInicio">Data de inicio do emprestimo:</label>
+                <input id="DataInicio" type="date" placeholder="Digite seu e-mail:">
+
+                <label for="DataFim">Data de finalização do emprestimo:</label>
+                <input id="DataFim" type="date" placeholder="Digite seu RA:">
+
+                <button id="button-send" type="submit">Finalizar</button>
+            </form>
         </div>
-    </main>
 
-    <footer id="footer_home">
-        <h3>&copy; 2023 - Todos os direitos reservados</h3>
-        <nav id="nav_rodape">
-            <ul>
-                <li><a href="#">Termos de uso</a></li>
-                <li><a href="#">Política de privacidade</a></li>
-                <li><a href="#">Sobre nós</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
-    </footer>
+    </div>
 
-    <script src="/Bibliotech-beta-/js/home.js"></script>
+<footer id="footer_aluguel">
+    <h3>&copy; 2023 - Todos os direitos reservados</h3>
+    <nav id="nav_rodape">
+        <ul>
+            <li><a href="#">Termos de uso</a></li>
+            <li><a href="#">Política de privacidade</a></li>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Contato</a></li>
+        </ul>
+    </nav>
+</footer>
+
 </body>
-
 </html>
