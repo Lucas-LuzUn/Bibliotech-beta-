@@ -21,16 +21,26 @@ function login(event) {
         },
         body: JSON.stringify(loginData)
     })
-    .then(response => response.json())
-    .then(data => {
-        if (data.success) { // Supondo que a API retorne um campo 'success' quando o login é válido
-            window.location.href = "/Bibliotech-beta-/pages/home.html"; // Redireciona para a página home.html
-        } else {
-            document.getElementById("msg_erro").innerHTML = "Usuário ou senha incorretos!";
+    .then(response => {
+        if(!response.ok) {
+            return response.json().then(error => {
+                throw new Error(error.erro);  //obs: aqui estou assumindo que a api retorna uma mensagem de erro caso de algum erro...
+            });
         }
+
+        return response.json();
     })
-    .catch(error => {
-        console.error('Erro:', error);
+
+    .then(data => {
+        console.log("Bem Vindo!", data);
+
+        localStorage.setItem("DadosAluno", JSON.stringify(data));
+
+        window.location.href = "/Bibliotech-beta-/pages/home.html";
+    })
+
+    .catch(error =>{
+        console.error("Error", error.mensage);
         document.getElementById("msg_erro").innerHTML = "Usuário ou senha incorretos!";
-    });
+    })
 }
