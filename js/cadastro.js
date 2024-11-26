@@ -5,6 +5,7 @@ function cadastrarPessoa(event){
     var nome = document.getElementById("nome").value;
     var email= document.getElementById("email").value;
     var RA = document.getElementById("RA").value;
+    var curso = document.getElementById("Curso").value;
     var senha = document.getElementById("senha").value;
 
     // Corpo da requisição com os dados da pessoa
@@ -12,6 +13,7 @@ function cadastrarPessoa(event){
         nome: nome,
         email: email,
         RA: RA,
+        curso: curso,
         senha: senha
     };
 
