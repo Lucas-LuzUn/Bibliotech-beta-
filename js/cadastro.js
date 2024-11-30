@@ -10,7 +10,7 @@ function cadastrarPessoa(event){
     var pessoaData = {
         nome: nome,
         email: email,
-        RA: RA,
+        ra: RA,
         senha: senha,
         curso: curso
     };
