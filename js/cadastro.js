@@ -10,7 +10,7 @@ function cadastrarPessoa(event){
     var pessoaData = {
         nome: nome,
         email: email,
-        ra: RA,
+        RA: RA,
         senha: senha,
         curso: curso
     };
@@ -40,5 +40,7 @@ function cadastrarPessoa(event){
         console.error('Erro na requisição:', error);
         alert("Erro ao cadastrar. Verifique o console.");
     });
+
+    alert(RA);
 }
 document.getElementById("form").addEventListener("submit", cadastrarPessoa);
