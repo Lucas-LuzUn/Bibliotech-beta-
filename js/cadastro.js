@@ -10,9 +10,9 @@ function cadastrarPessoa(event){
     var pessoaData = {
         nome: nome,
         email: email,
-        RA: RA, 
-        curso: curso,
-        senha: senha
+        ra: RA,
+        senha: senha,
+        curso: curso
     };
 
     fetch('http://localhost:8080/alunos/cadastrar', {
