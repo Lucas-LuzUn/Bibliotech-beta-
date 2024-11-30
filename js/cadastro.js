@@ -23,13 +23,13 @@ function cadastrarPessoa(event){
         body: JSON.stringify(pessoaData)
     })
     .then(response => {
-        if (!response.ok) { // Verifica se a resposta da API foi bem-sucedida
-            throw new Error('Erro na API: ' + response.statusText);
+        if (!response.ok) {
+            throw new Error(`Erro na API: ${response.status} - ${response.statusText}`);
         }
         return response.json();
     })
     .then(data => {
-        console.log(data);
+        console.log('Resposta da API:', data);
         if (data.success) {
             window.location.href = "/Bibliotech-beta-/index.html";
         } else {
@@ -37,9 +37,8 @@ function cadastrarPessoa(event){
         }
     })
     .catch(error => {
-        console.error('Erro:', error);
-        alert("Erro ao cadastrar");
+        console.error('Erro na requisição:', error);
+        alert("Erro ao cadastrar. Verifique o console.");
     });
 }
-
 document.getElementById("form").addEventListener("submit", cadastrarPessoa);
