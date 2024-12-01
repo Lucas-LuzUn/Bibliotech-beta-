@@ -39,7 +39,9 @@ function buscarLivros(buscarLivros) {
                         // Extrai o título e a capa do livro da resposta
                         const title = item.volumeInfo.title;
                         const capa = item.volumeInfo.imageLinks?.thumbnail || 'default-thumbnail.jpg'; // Caso não tenha capa, usa uma imagem padrão
-                        const identificação = item.etag;  // A identificação do livro (usada no controle)
+                        const autor = item.volumeInfo.authors
+                        const genero = item.volumeInfo.categories
+                        // A identificação do livro (usada no controle)
 
                         // Cria um novo elemento de card para exibir o livro
                         const card = document.createElement("div");
@@ -51,7 +53,7 @@ function buscarLivros(buscarLivros) {
                             <div class="info_livros">
                                 <h5 class="titulo-livro">${title}</h5>
                             </div>
-                            <button class="button_alugar" onclick="capturar_livro('${title}')">Ver mais</button>
+                            <button class="button_alugar" onclick="capturar_livro('${title}', '${autor}', '${genero}')">Ver mais</button>
                         `;
                         // Atribui o HTML do card ao elemento card
                         card.innerHTML = cardItem;
@@ -82,10 +84,14 @@ function pesquisar() {
 }
 
 // Função chamada quando o usuário clica no botão "Alugar" de um livro
-function capturar_livro(title) {    
+function capturar_livro(title ,autor, genero) {    
     // Armazena o título do livro selecionado no localStorage (para persistir entre as páginas)
     localStorage.setItem("Livro", title);
     // Redireciona para a página de aluguel (alugar.html)
+    localStorage.setItem("Autor", autor);
+
+    localStorage.setItem("Genero", genero);
+
     window.location.href = "livro.html";
 }
 

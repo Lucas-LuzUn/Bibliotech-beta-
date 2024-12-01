@@ -44,5 +44,37 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function Alugar(){
-    window.location.href = "alugue.html";
+    // Recupera os dados do livro armazenados no localStorage
+    const title = localStorage.getItem("Livro");
+    const autor = localStorage.getItem("Autor");
+    const genero = localStorage.getItem("Genero");
+    
+        // Cria um objeto com os dados do livro para enviar ao banco de dados
+    const livro = {
+        titulo: title,
+        autor: autor,
+        genero: genero
+    };
+    
+    // URL da API para onde o livro será enviado (substitua pela sua URL da API)
+    const apiUrl = "http://localhost:8080/livros/cadastrar";  // Altere conforme a sua API
+    
+    // Envia o objeto JSON para o backend via requisição POST
+    fetch(apiUrl, {
+    method: "POST",  // Método POST para cadastrar
+        headers: {
+            "Content-Type": "application/json"  // Informando que os dados são em JSON
+        },
+        body: JSON.stringify(livro)  // Converte o objeto para JSON antes de enviar
+    })
+    .then(response => response.json())  // Converte a resposta em JSON
+    .then(data => {
+        // Exibe a resposta ou trata conforme a resposta da API
+        console.log("Livro cadastrado com sucesso:", data);
+        // Talvez redirecionar o usuário ou mostrar uma mensagem
+    })
+    .catch(error => {
+        // Trata qualquer erro que ocorra na requisição
+        console.error("Erro ao cadastrar livro:", error);
+    });
 }

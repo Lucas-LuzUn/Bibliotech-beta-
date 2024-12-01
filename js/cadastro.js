@@ -38,9 +38,7 @@ function cadastrarPessoa(event){
     })
     .catch(error => {
         console.error('Erro na requisição:', error);
-        alert("Erro ao cadastrar. Verifique o console.");
+        alert("Erro ao cadastrar");
     });
-
-    alert(RA);
 }
 document.getElementById("form").addEventListener("submit", cadastrarPessoa);
