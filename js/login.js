@@ -46,3 +46,7 @@ function login(event) {
         document.getElementById("msg_erro").innerHTML = error.message || "Erro ao fazer login.";
     });
 }
+
+function Acessar(){
+    window.location.href = "/pages/home.html"
+}

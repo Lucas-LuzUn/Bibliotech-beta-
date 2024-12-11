@@ -1,7 +1,7 @@
 // Chave de API do Google Books
 const apiKey = "AIzaSyDhjlMv4hLPsbO_x1Ge45O_05GLVlfQXh0";
 // Variável global que armazena o valor da pesquisa. Inicialmente é "All"
-let pesquisarLivro = "All";
+let pesquisarLivro = "Romance";
 
 // Evento que é disparado quando o conteúdo da página (DOM) é completamente carregado
 document.addEventListener("DOMContentLoaded", function() {

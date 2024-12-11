@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/Bibliotech-beta-/css/livro.css">
-    <link rel="stylesheet" href="/Bibliotech-beta-/css/sidebar.css">
+
+    <link rel="stylesheet" href="/css/livro.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/layout_padrao.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
     <title>BiblioTech</title>
-    <link rel="icon" href="/Bibliotech-beta-/imagens/icon_logo.png" type="image/png">
+
+    <link rel="icon" href="/imagens/icon_logo.png" type="image/png">
 </head>
 <body>
 
-    <header id="header_aluguel">
+    <header id="header_principal">
 
         <button id="toggleButton">
             <i class="fas fa-bars" onclick="open_menu()"></i> 
@@ -24,30 +29,30 @@
         <div id="sideBar" class="sidebar hidden">
             <div id="menuContent">
                 <ul>
-                    <li><a href="dashboard.html"><i class="fas fa-home"></i> Dashboard</a></li>
-                    <li><a href="livros.html"><i class="fas fa-book"></i> Livros</a></li>
-                    <li><a href="/pages/cadastro.html"><i class="fas fa-user"></i> Cadastro</a></li>
-                    <li><a href="emprestimo.html"><i class="fas fa-hand-holding"></i> Empréstimo</a></li>
+                    <li><a href="/pages/home.html"><i class="fas fa-home"></i> Dashboard</a></li>
+                    <li><a href="/pages/sobre_nos.html"><i class="fa-solid fa-people-group"></i> Sobre Nós</a></li>
+                    <li><a href="emprestimo.html"><i class="fas fa-hand-holding"></i> Meus Empréstimos</a></li>
+                    <li><a href="/index.html"><i class="fa-solid fa-door-open"></i> Sair</a></li>
                 </ul>
             </div>
         </div>
 
-        <a href="/Bibliotech-beta-/pages/home.html">
-            <img src="/Bibliotech-beta-/imagens/logo.png" width="150px" alt="Logo BiblioTech">
+        <a href="/pages/home.html">
+            <img src="/imagens/logo.png" width="150px" alt="Logo BiblioTech">
         </a>
 
-        <div id="itens_aluguel">
+        <div id="itens_principal">
             <input type="text" placeholder="Procure o livro que deseja:" id="barra_pesquisa">
             <button id="button_pesquisa" onclick="pesquisar()"><i class="fa-solid fa-magnifying-glass fa-2xl" style="color: #213454;"></i></button>
         </div>
         
-        <a href="/Bibliotech-beta-/index.html" id="icon_login">
+        <a href="/index.html" id="icon_login">
             <i class="fa-solid fa-user fa-2xl" style="color: #213454;"></i>
         </a>
     </header>
 
-    <nav id="nav_aluguel">
-        <div id="menu_aluguel">
+    <nav id="nav_principal">
+        <div id="menu_principal">
             <a class="button_menu" href="#"><i class="fas fa-heart"></i> Romance</a>
             |
             <a class="button_menu" href="#"><i class="fas fa-khanda"></i> Aventura</a> <!-- Ícone da espada precisa ser adicionado -->
@@ -64,7 +69,7 @@
         </div>
     </main>
 
-    <footer id="footer_aluguel">
+    <footer id="footer_principal">
         <h3>&copy; 2023 - Todos os direitos reservados</h3>
         <nav id="nav_rodape">
             <ul>
@@ -76,7 +81,8 @@
         </nav>
     </footer>
 
-    <script src="/Bibliotech-beta-/js/livro.js"></script>
+    <script src="/js/livro.js"></script>
+    <script src="/js/config.js"></script>
     
 </body>
 </html>

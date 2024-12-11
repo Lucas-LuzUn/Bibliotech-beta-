@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function Alugar(){
+
+    window.location.href = "alugue.html";
+/*
     // Recupera os dados do livro armazenados no localStorage
     const title = localStorage.getItem("Livro");
     const autor = localStorage.getItem("Autor");
@@ -77,4 +80,5 @@ function Alugar(){
         // Trata qualquer erro que ocorra na requisição
         console.error("Erro ao cadastrar livro:", error);
     });
+*/
 }
